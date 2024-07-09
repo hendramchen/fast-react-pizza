@@ -1,6 +1,7 @@
+import { MenuType } from "../../types";
 import { formatCurrency } from "../../utils/helpers";
 
-function MenuItem({ pizza }) {
+function MenuItem({ pizza }: { pizza: MenuType }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
   console.log(id);
