@@ -27,3 +27,9 @@ export interface OrderType {
   address: string;
   cart: CartType[];
 }
+
+export interface OrderItemType {
+  quantity: number;
+  name: string;
+  totalPrice: number;
+}
