@@ -33,3 +33,14 @@ export interface OrderItemType {
   name: string;
   totalPrice: number;
 }
+
+export interface UserType {
+  username: string;
+  status: string;
+  position: {
+    latitude: string | number;
+    longitude: string | number;
+  };
+  address: string;
+  error: string;
+}

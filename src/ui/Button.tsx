@@ -5,6 +5,7 @@ interface ButtonProps {
   disabled?: boolean;
   to?: string;
   type: 'primary' | 'small' | 'secondary';
+  onClick?: () => void;
 }
 
 interface StyleType {
@@ -18,6 +19,7 @@ export default function Button({
   disabled = false,
   to,
   type = 'primary',
+  onClick,
 }: ButtonProps) {
   const base =
     'inline-block text-sm rounded-full bg-yellow-400 font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed';
@@ -35,6 +37,14 @@ export default function Button({
         {children}
       </Link>
     );
+
+  if (onClick) {
+    return (
+      <button disabled={disabled} className={styles[type]} onClick={onClick}>
+        {children}
+      </button>
+    );
+  }
 
   return (
     <button disabled={disabled} className={styles[type]}>
