@@ -8,7 +8,7 @@ function getPosition() {
   });
 }
 
-export const fetchAddress = createAsyncThunk(
+export const fetchAddress: any = createAsyncThunk(
   'user/fetchAddress',
   async function () {
     // 1) We get the user's geolocation position
