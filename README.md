@@ -9,6 +9,7 @@
 - Redux Toolkit
 
 This project cover, how to implement React Router, use tailwindcss for styling and Redux for state managment.
+[Check this demo link](https://fast-react-pizza-umber.vercel.app/)
 
 These are screenshot of the pages:
 
